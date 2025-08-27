@@ -1,3 +1,4 @@
+import { Transaction } from './types/transaction';
 import { Component } from '@angular/core';
 import { BannerComponent } from "./banner/banner.component";
 import { FormNewTransactionComponent } from './form-new-transaction/form-new-transaction.component';
@@ -9,5 +10,8 @@ import { FormNewTransactionComponent } from './form-new-transaction/form-new-tra
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'anybank';
+
+  processarMovimentacao(transacao: Transaction) {
+    console.log(transacao);
+  }
 }
