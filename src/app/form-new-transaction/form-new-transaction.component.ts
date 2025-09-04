@@ -10,17 +10,17 @@ import { Transaction } from '../types/transaction';
 })
 export class FormNewTransactionComponent {
 
-  tipoTransacao: string = '';
-  valorTransacao!: number;
+  tipo: string = '';
+  valor!: number;
 
   movimentacaoCriada = output<Transaction>();
 
   onSubmit() {
 
-    const transacao = new Transaction(this.tipoTransacao, this.valorTransacao);
-    console.log(transacao);
+    const movimentacao = new Transaction(this.tipo, this.valor);
+    console.log(movimentacao);
 
-    this.movimentacaoCriada.emit(transacao);
+    this.movimentacaoCriada.emit(movimentacao);
 
   }
 }

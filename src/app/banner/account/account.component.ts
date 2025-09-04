@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-account',
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AccountComponent {
 
-  
+  saldo = input.required<number>()
 }

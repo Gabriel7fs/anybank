@@ -1,6 +1,6 @@
 <div class="app">
   <div class="banner-form-wrapper">
-    <app-banner></app-banner>
+    <app-banner [saldo]="saldo()"></app-banner>
     <app-form-new-transaction (movimentacaoCriada)="processarMovimentacao($event)"></app-form-new-transaction>
   </div>
 </div>
