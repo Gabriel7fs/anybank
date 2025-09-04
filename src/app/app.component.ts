@@ -16,18 +16,16 @@ export class AppComponent {
   saldo = computed(() => {
     return this.movimentacao().reduce((acc, mov) => {
 
-      if (mov.tipo === TransactionType.DEPOSITO) {
-        return acc + mov.valor;
-      }
+      switch (mov.tipo) {
+        case TransactionType.DEPOSITO:
+          return acc + mov.valor;
 
-      if (mov.tipo === TransactionType.SAQUE) {
-        if (mov.valor <= acc) {
+        case TransactionType.SAQUE:
           return acc - mov.valor;
-        }
-        return acc;
-      }
 
-      return acc;
+        default:
+          throw new Error('Movimentação inválida!');
+      }
     }, 0);
   });
 

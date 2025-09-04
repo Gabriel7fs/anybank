@@ -1,10 +1,11 @@
 import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Transaction } from '../types/transaction';
+import { Transaction, TransactionType } from '../types/transaction';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
   selector: 'app-form-new-transaction',
-  imports: [FormsModule],
+  imports: [FormsModule, KeyValuePipe],
   templateUrl: './form-new-transaction.component.html',
   styleUrl: './form-new-transaction.component.css'
 })
@@ -12,6 +13,8 @@ export class FormNewTransactionComponent {
 
   tipo: string = '';
   valor!: number;
+
+  tipoMovEnum = TransactionType;
 
   movimentacaoCriada = output<Transaction>();
 
