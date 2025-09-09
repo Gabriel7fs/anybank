@@ -21,7 +21,6 @@ export class FormNewTransactionComponent {
   onSubmit() {
 
     const movimentacao = new Transaction(this.tipo, this.valor);
-    console.log(movimentacao);
 
     this.movimentacaoCriada.emit(movimentacao);
 

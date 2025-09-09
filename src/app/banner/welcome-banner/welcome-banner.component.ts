@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class WelcomeBannerComponent {
 
-  dataAtual = new Date()
+  dataAtual = new Date();
 }

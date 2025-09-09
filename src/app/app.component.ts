@@ -2,10 +2,11 @@ import { Transaction, TransactionType } from './types/transaction';
 import { Component, computed, signal } from '@angular/core';
 import { BannerComponent } from "./banner/banner.component";
 import { FormNewTransactionComponent } from './form-new-transaction/form-new-transaction.component';
+import { BankStatementComponent } from "./bank-statement/bank-statement.component";
 
 @Component({
   selector: 'app-root',
-  imports: [BannerComponent, FormNewTransactionComponent],
+  imports: [BannerComponent, FormNewTransactionComponent, BankStatementComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

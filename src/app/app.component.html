@@ -3,4 +3,6 @@
     <app-banner [saldo]="saldo()"></app-banner>
     <app-form-new-transaction (movimentacaoCriada)="processarMovimentacao($event)"></app-form-new-transaction>
   </div>
+
+  <app-bank-statement [movimentacoes]="movimentacao()" class="bank-statement"></app-bank-statement>
 </div>

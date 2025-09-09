@@ -1,0 +1,15 @@
+<aside class="extrato">
+  <h2 class="titulo">Extrato</h2>
+
+  <ul class="transacoes">
+    @for (valor of movimentacoes(); track valor.id) {
+      <li>
+        <app-transaction [transacao]="valor" ></app-transaction>
+      </li>
+    } @empty {
+      <li aria-hidden="true">
+        Sem movimentações bancárias
+      </li>
+    }
+  </ul>
+</aside>
